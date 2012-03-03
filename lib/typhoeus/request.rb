@@ -34,7 +34,8 @@ module Typhoeus
       :auth_method,
       :user_agent,
       :proxy_auth_method,
-      :proxy_type
+      :proxy_type,
+      :enable_cookies
     ]
 
     attr_reader   :url
@@ -87,6 +88,7 @@ module Typhoeus
       @cache_timeout    = safe_to_i(options[:cache_timeout])
       @follow_location  = options[:follow_location]
       @max_redirects    = options[:max_redirects]
+      @enable_cookies   = options[:enable_cookies]
       @proxy            = options[:proxy]
       @proxy_type       = options[:proxy_type]
       @proxy_username   = options[:proxy_username]
